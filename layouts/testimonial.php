@@ -9,25 +9,30 @@
 			<div id="testimonial-slider" class="owl-carousel owl-theme">
 
 				<!-- testimonial -->
-				<div class="testimonial">
-					<div class="testimonial-meta">
-						<img src="./img/perso1.jpg" alt="">
-						<h3 class="white-text">John Doe</h3>
-						<span>Web Designer</span>
-					</div>
-					<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-				</div>
-				<!-- /testimonial -->
+				<?php
+					include_once './modules/TestimonialHelper.php';
 
-				<!-- testimonial -->
-				<div class="testimonial">
-					<div class="testimonial-meta">
-						<img src="./img/perso2.jpg" alt="">
-						<h3 class="white-text">John Doe</h3>
-						<span>Web Designer</span>
-					</div>
-					<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-				</div>
+					class RenderTestimonial extends TestimonialHelper
+					{
+						public function testimonialDatas()
+						{
+							return( parent::allTestimonialData() );
+						}
+					}
+
+					$testimonial = new RenderTestimonial();
+					$testimonialData = $testimonial->testimonialDatas();
+					foreach ($testimonialData as $key => $value) {
+						echo "<div class='testimonial'>";
+						echo "<div class='testimonial-meta'>";
+						echo "<img class='img-responsive' src='./img/".$testimonialData[$key]->profile."' alt='' />";
+						echo "<h3 class='white-text'>".$testimonialData[$key]->name."</h3>";
+						echo "<span>".$testimonialData[$key]->position."</span>";
+						echo "</div>";
+						echo "<p class='white-text'>".$testimonialData[$key]->description."</p>";
+						echo "</div>";
+					}
+				?>
 				<!-- /testimonial -->
 
 			</div>

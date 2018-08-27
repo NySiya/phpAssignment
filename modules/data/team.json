@@ -1,0 +1,5 @@
+[
+  {"name": "John Doe", "role": "Web Designer", "profile": "team1.jpg"},
+  {"name": "Alvin Potter", "role": "Front End", "profile": "team2.jpg"},
+  {"name": "Sheldon Cooper", "role": "Project Manager", "profile": "team3.jpg"}
+]

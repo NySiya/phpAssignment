@@ -1,0 +1,5 @@
+[
+  {"planType": "Basic plan", "duration": "$9<span class='duration'>/ month</span>", "diskSize": "1GB Disk Space", "emailSize": "100 Email Account", "support": "24/24 Support"},
+  {"planType": "Silver plan", "duration": "$19<span class='duration'>/ month</span>", "diskSize": "10GB Disk Space", "emailSize": "100 Email Account", "support": "24/24 Support"},
+  {"planType": "Gold plan", "duration": "$29<span class='duration'>/ month</span>", "diskSize": "25GB Disk Space", "emailSize": "100 Email Account", "support": "24/24 Support"}
+]
